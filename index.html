@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Explorer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Movie Explorer</h1>
+      </div>
+
+      <div class="search-section">
+        <div class="search-bar">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for movies..."
+          />
+          <button onclick="searchMovies()">Search</button>
+        </div>
+      </div>
+
+      <div id="error" class="error" style="display: none"></div>
+      <div id="loading" class="loading" style="display: none">Loading...</div>
+
+      <div class="movie-grid" id="movieGrid"></div>
+
+      <div class="pagination">
+        <button onclick="previousPage()" id="prevButton" disabled>
+          Previous
+        </button>
+        <button onclick="nextPage()" id="nextButton">Next</button>
+      </div>
+    </div>
+
+    <div id="movieModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="movieDetails"></div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
